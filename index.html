@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8d1825da9a.js" crossorigin="anonymous"></script>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div id="game">
+        <h1>Rock Paper Scissors</h1>
+
+        <!--Displays Score player vs computer -->
+        <div class="score">
+            <div class="score--player">
+                <h2>Player</h2>
+                <p class="score--count" id="playerScore">0 / 5</p>
+            </div>
+            <div class="score--computer">
+                <h2>Computer</h2>
+                <p class="score--count" id="computerScore">0 / 5</p>
+            </div>
+        </div>
+
+        <!-- Options / Main body of the game -->
+        <div class="options">
+            <div class="options--message"></div>
+            <div class="options--player">
+                <button class="option_player option_rock">
+                    <i class="far fa-hand-rock fa-5x"></i>
+                </button>
+
+                <button class="option_player option_paper">
+                    <i class="far fa-hand-paper fa-5x"></i>
+                </button>
+
+                <button class="option_player option_scissors">
+                    <i class="far fa-hand-scissors fa-5x"></i>
+                </button>
+            </div>
+
+            <div class="options--computer">
+                <button class="option_player option_rock" disabled>
+                    <i class="far fa-hand-rock fa-5x"></i>
+                </button>
+
+                <button class="option_player option_paper" disabled>
+                    <i class="far fa-hand-paper fa-5x"></i>
+                </button>
+
+                <button class="option_player option_scissors" disabled>
+                    <i class="far fa-hand-scissors fa-5x"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
