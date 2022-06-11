@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8d1825da9a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
@@ -13,19 +14,19 @@
 
         <!--Displays Score player vs computer -->
         <div class="score">
-            <div class="score--player">
+            <div>
                 <h2>Player</h2>
-                <p class="score--count" id="playerScore">0 / 5</p>
+                <p class="score--count score--player">0 / 5</p>
             </div>
-            <div class="score--computer">
+            <div>
                 <h2>Computer</h2>
-                <p class="score--count" id="computerScore">0 / 5</p>
+                <p class="score--count score--computer">0 / 5</p>
             </div>
         </div>
 
         <!-- Options / Main body of the game -->
         <div class="options">
-            <div class="options--message"></div>
+            <div class="options--message">YOU WON!</div>
             <div class="options--player">
                 <button class="option_player option_rock">
                     <i class="far fa-hand-rock fa-5x"></i>
@@ -41,19 +42,21 @@
             </div>
 
             <div class="options--computer">
-                <button class="option_player option_rock" disabled>
+                <button class="option_computer option_rock" disabled>
                     <i class="far fa-hand-rock fa-5x"></i>
                 </button>
 
-                <button class="option_player option_paper" disabled>
+                <button class="option_computer option_paper" disabled>
                     <i class="far fa-hand-paper fa-5x"></i>
                 </button>
 
-                <button class="option_player option_scissors" disabled>
+                <button class="option_computer option_scissors" disabled>
                     <i class="far fa-hand-scissors fa-5x"></i>
                 </button>
             </div>
         </div>
+
+        <h3>Choose wisely!</h3>
     </div>
 </body>
 </html>
