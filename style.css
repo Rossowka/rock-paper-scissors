@@ -9,6 +9,7 @@
     --winnerColor: #4cd137;
     --selectColor: #fbc531;
     --optionsColor: #273c75;
+    --computerColor: #9c88ff;
 }
 
 * {
@@ -41,8 +42,15 @@ h1 {
     text-align: center;
 }
 
+#score--player, #score--computer {
+    padding: 0.5rem 1.5rem;
+}
+
+/* GAME DISPLAY */
+
 .options {
-    margin: 2rem 1rem;
+    margin: 2.5rem 1rem;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -60,15 +68,11 @@ h1 {
 
 .options--computer {
     border-left: 1px solid var(--textColor);
-
 }
 
 .option_computer, .option_player {
     margin: 0.5rem;
     border-radius: 10px;
-    /* padding: 1rem;
-    display: flex;
-    flex-direction: column; */
     width: 106px;
     height: 106px;
 }
@@ -104,17 +108,49 @@ h1 {
 .options--message {
     position: absolute;
     border-radius: 25px;
-    padding: 2rem;
+    padding: 1rem 2rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     background-color: var(--secondaryBgrColor);
     left: 50%;
-    transform: translate(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: opacity 0.25s ease-in-out;
     z-index: 1;
+    width: 80%;
 }
 
-h3 {
+.options--reset {
+    position: absolute;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: var(--selectColor);
+    text-transform: uppercase;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.options--encouragement {
+    position: absolute;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: var(--secondaryBgrColor);
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    width: 80%;
     text-align: center;
-    margin-top: -1rem;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.winner {
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: var(--winnerColor);
 }

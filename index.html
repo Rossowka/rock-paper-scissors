@@ -14,49 +14,50 @@
 
         <!--Displays Score player vs computer -->
         <div class="score">
-            <div>
+            <div id="score--player">
                 <h2>Player</h2>
-                <p class="score--count score--player">0 / 5</p>
+                <p class="score--player"></p>
             </div>
-            <div>
+            <div id="score--computer">
                 <h2>Computer</h2>
-                <p class="score--count score--computer">0 / 5</p>
+                <p class="score--computer"></p>
             </div>
         </div>
 
         <!-- Options / Main body of the game -->
         <div class="options">
-            <div class="options--message">YOU WON!</div>
+            <div class="options--message hide"></div>
             <div class="options--player">
-                <button class="option_player option_rock">
+                <button class="option_player option_rock" data-options="rock">
                     <i class="far fa-hand-rock fa-5x"></i>
                 </button>
 
-                <button class="option_player option_paper">
+                <button class="option_player option_paper" data-options="paper">
                     <i class="far fa-hand-paper fa-5x"></i>
                 </button>
 
-                <button class="option_player option_scissors">
+                <button class="option_player option_scissors" data-options="scissors">
                     <i class="far fa-hand-scissors fa-5x"></i>
                 </button>
             </div>
 
             <div class="options--computer">
-                <button class="option_computer option_rock" disabled>
+                <button class="option_computer option_rock" data-options="rock" disabled>
                     <i class="far fa-hand-rock fa-5x"></i>
                 </button>
 
-                <button class="option_computer option_paper" disabled>
+                <button class="option_computer option_paper" data-options="paper" disabled>
                     <i class="far fa-hand-paper fa-5x"></i>
                 </button>
 
-                <button class="option_computer option_scissors" disabled>
+                <button class="option_computer option_scissors" data-options="scissors" disabled>
                     <i class="far fa-hand-scissors fa-5x"></i>
                 </button>
             </div>
+            <button class="options--reset hide">Reset &#8634;</button>
+            <div class="options--encouragement">Choose wisely!</div>
         </div>
-
-        <h3>Choose wisely!</h3>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
